@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dpNotes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="dpNotes" Height="379.365" Width="543.254">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Height="25">
+            <MenuItem Header="File" Grid.Row="0">
+                <MenuItem Header="_New"></MenuItem>
+                <MenuItem Header="_Open"></MenuItem>
+                <MenuItem Header="_Close"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="Help"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="About"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <DockPanel MinWidth="515" MinHeight="220" 
+                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                   Grid.Row="1">
+            <TextBlock Background="BlanchedAlmond" 
+                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> 
+                Hello
+            </TextBlock>
+        </DockPanel>
+        <StatusBar Grid.Row="2" Background="Azure">
+            <StatusBarItem HorizontalAlignment="Left">
+                <Label MinWidth="200">File:</Label>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal">
+                    <StatusBarItem HorizontalAlignment="Left">
+                        <TextBox IsReadOnly="True" Height="21.2">Lines: nnnn, Words: nnnn</TextBox>
+                    </StatusBarItem>
+                    <StatusBarItem HorizontalAlignment="Right">
+                        <Label MinWidth="100" Height="30" VerticalAlignment="Center">Date:</Label>
+                    </StatusBarItem>
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>
