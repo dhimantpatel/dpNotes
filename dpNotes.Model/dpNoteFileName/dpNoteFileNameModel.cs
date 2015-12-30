@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace dpNotes.Model
+namespace dpNotes.Model.dpNoteFileName
 {
     public class dpNoteFileNameModel
     {
